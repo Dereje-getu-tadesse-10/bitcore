@@ -1,6 +1,14 @@
-# bitcore
+### Projet perso 
 
-Je souhaite intégrer un module de paiement avec bitcore sur mon site web avec la bliothèque nodejs et bitcore.
-Ce que je veux faire c'est de pouvoir générer une adresse bitcoin a chaque fois qu'un utilisateur souhaite acheter un vetement sur mon site web
-une fois que l'adresse est générée je veux que l'utilisateur puisse payer avec cette adresse et que le paiement soit validé et que l'argent soit envoyé sur mon compte tout 
-ca en utilisant bitcore. Je ne sais pas comment faire pour générer une adresse bitcoin et comment faire pour que l'argent soit envoyé sur mon compte. Je suis débutant en bitcore
+#### Description
+
+This project is a simple test of the bitcoin network.
+We use the bitcoin testnet to send and receive bitcoin.
+
+Step 1: Create a new address with a private key 
+Step 2: Send bitcoin to this address
+Step 3: Receive bitcoin from this address
+
+
+#### Blockcyper 
+[Transaction](https://live.blockcypher.com/btc-testnet/address/mzdrLmP9knm2qiuVEW7fW8BJj1k28iFHew/)
