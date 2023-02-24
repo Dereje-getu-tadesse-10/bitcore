@@ -1,20 +1,9 @@
-const bitcore = require('bitcore-lib');
-const explorers = require('bitcore-explorers')
+import bitcore from 'bitcore-lib';
+import explorers from 'bitcore-explorers';
 
-function generateNewAddress() {
-    // Générer une nouvelle clé privée aléatoire
-    const privateKey = new bitcore.PrivateKey();
+const privateKeyWIF = 'cReKsiuZewEBoZgPsT2DQ4em3gtrVqVq2Gii9kukkaiWVs5S69HE';
 
-    // Obtenir l'adresse publique correspondante
-    const publicKey = privateKey.toPublicKey();
-    const address = publicKey.toAddress();
+const privateKey = bitcore.PrivateKey.fromWIF(privateKeyWIF);
+const address = privateKey.toAddress();
 
-    // Retourner la clé privée et l'adresse publique
-    return { privateKey: privateKey, address: address };
-}
-
-console.log(
-    ` L'adresse publique : ${generateNewAddress().address.toString()}\n`,
-    `La clé privée : ${generateNewAddress().privateKey.toString()} \n`,
-    `La clé privée en WIF : ${generateNewAddress().privateKey.toWIF()}`,
-);
+console.log(address.toString());
