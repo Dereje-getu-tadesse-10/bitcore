@@ -1,7 +1,14 @@
 const { testnet, mainnet } = require("bitcore-lib/lib/networks");
-const { wallet, hdWallet } = require("./walletBtc");
+const { createWallet, createHDWallet } = require("./walletBtc");
+const checkIncomingBTCTransactions = require("./sendBtc");
 
-const createWallet = wallet(testnet);
+const newWallet = createWallet(testnet);
+const addressToWatch = newWallet.address;
 
-console.log(createWallet);
+// param 1 : prix en euro
+// param 2 : adresse à surveiller
+
+//checkIncomingBTCTransactions(70, addressToWatch);
+
+
 

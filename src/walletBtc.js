@@ -17,7 +17,7 @@ const testnet = bitcore.Networks.testnet;
  * console.log(newWallet.address); // "n1B5z5KtSX5Z9L9pK1fZG7VfEhJyH7QQf8"
  */
 
-function wallet(network) {
+function createWallet(network) {
     const privateKey = new bitcore.PrivateKey(network);
     const address = privateKey.toAddress(network);
 
@@ -107,7 +107,7 @@ function getBalance(address) {
 
 
 module.exports = {
-    wallet,
+    createWallet,
     hdWallet,
     connectWallet,
     getBalance
